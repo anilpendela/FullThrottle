@@ -8,4 +8,5 @@ class ActivityPeriods(models.Model):
 class User(AbstractBaseUser):
     user_id = models.CharField(max_length=16, null=True, blank=True)
     tz = models.CharField(max_length=64, null=True, blank=True)
+    real_name = models.CharField(max_length=64, null=True, blank=True)
     activity_periods = models.ManyToManyField(to=ActivityPeriods)
